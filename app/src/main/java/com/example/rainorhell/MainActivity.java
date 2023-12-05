@@ -82,7 +82,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Location location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-        cityName = getCityName(location.getLongitude(), location.getLatitude());
+        if (location != null) {
+            cityName = getCityName(location.getLongitude(), location.getLatitude());
+            getWeatherInfo(cityName);
+        } else {
+            // Trate o caso em que a localização é nula
+            Toast.makeText(this, "Localização indisponível", Toast.LENGTH_SHORT).show();
+        }
         getWeatherInfo(cityName);
 
         searchIV.setOnClickListener(new View.OnClickListener() {

@@ -38,8 +38,8 @@
 
         <ImageView
             android:id="@+id/idIVCondition"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="61dp"
+            android:layout_height="53dp"
             android:layout_below="@+id/idTVTemperature"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="5dp"
